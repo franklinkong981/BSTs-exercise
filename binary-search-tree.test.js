@@ -23,7 +23,7 @@ describe("insert", function() {
   });
 });
 
-/*describe("insertRecursively", function() {
+describe("insertRecursively", function() {
   it("inserts a node at the correct position", function() {
     var binarySearchTree = new BinarySearchTree();
     binarySearchTree
@@ -33,6 +33,7 @@ describe("insert", function() {
       .insertRecursively(12);
     expect(binarySearchTree.root.val).toEqual(15);
     expect(binarySearchTree.root.right.val).toEqual(20);
+    expect(binarySearchTree.root.left.val).toEqual(10);
     expect(binarySearchTree.root.left.right.val).toEqual(12);
   });
 
@@ -45,7 +46,7 @@ describe("insert", function() {
   });
 });
 
-describe("find", function() {
+/*describe("find", function() {
   it("finds a node correctly", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
