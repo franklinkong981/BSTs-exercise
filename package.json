@@ -1,0 +1,15 @@
+{
+  "name": "bsts-exercise",
+  "version": "1.0.0",
+  "description": "Some exercises on Binary Search Trees I do where I write methods to perform operations on BSTs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
