@@ -89,14 +89,14 @@ class BinarySearchTree {
    * return the node, if found; else undefined. Uses recursion. */
 
   findRecursively(val, current = this.root) {
-    if (this.root === null) {
+    if (current === null) {
       return undefined;
-    } else if (this.root.val === val) {
-      return this.root;
+    } else if (current.val === val) {
+      return current;
     } else if (val < current.val) {
-      return this.findRecursively(val, this.root.left);
+      return this.findRecursively(val, current.left);
     } else {
-      return this.findRecursively(val, this.root.right);
+      return this.findRecursively(val, current.right);
     }
   }
 
