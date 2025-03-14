@@ -98,7 +98,7 @@ describe("findRecursively", function() {
   });
 });
 
-/* describe("dfsPreOrder", function() {
+describe("dfsPreOrder", function() {
   it("returns an array of values found with DFS Pre Order", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
@@ -128,7 +128,7 @@ describe("dfsInOrder", function() {
   });
 });
 
-describe("dfsPostOrder", function() {
+/* describe("dfsPostOrder", function() {
   it("returns an array of values found with DFS Post Order", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
