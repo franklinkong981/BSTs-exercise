@@ -128,7 +128,7 @@ describe("dfsInOrder", function() {
   });
 });
 
-/* describe("dfsPostOrder", function() {
+describe("dfsPostOrder", function() {
   it("returns an array of values found with DFS Post Order", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
@@ -143,7 +143,7 @@ describe("dfsInOrder", function() {
   });
 });
 
-describe("BFS", function() {
+/* describe("BFS", function() {
   it("should return the correct output", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
