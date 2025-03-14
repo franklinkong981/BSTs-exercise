@@ -46,7 +46,7 @@ describe("insertRecursively", function() {
   });
 });
 
-/*describe("find", function() {
+describe("find", function() {
   it("finds a node correctly", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
@@ -72,7 +72,7 @@ describe("insertRecursively", function() {
   });
 });
 
-describe("findRecursively", function() {
+/*describe("findRecursively", function() {
   it("finds a node correctly", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
