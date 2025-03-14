@@ -158,7 +158,68 @@ class BinarySearchTree {
    * Returns the removed node. */
 
   remove(val) {
-
+      let nodeToRemove = this.root;
+      let parent;
+  
+      while (nodeToRemove.val !== val) {
+        parent = nodeToRemove;
+        if (val < nodeToRemove.val) {
+          nodeToRemove = nodeToRemove.left;
+        } else {
+          nodeToRemove = nodeToRemove.right;
+        }
+      }
+  
+      if (nodeToRemove !== this.root) {
+        if (nodeToRemove.left === null && nodeToRemove.right === null) {
+          if (parent.left === nodeToRemove) {
+            parent.left = null;
+          } else {
+            parent.right = null;
+          }
+        } else if (nodeToRemove.left !== null && nodeToRemove.right !== null) {
+          let rightParent = nodeToRemove;
+          let right = nodeToRemove.right;
+          if (right.left === null) {
+            right.left = nodeToRemove.left;
+            if (parent.left === nodeToRemove) {
+              parent.left = right;
+            } else {
+              parent.right = right;
+            }
+          } else {
+            while (right.left !== null) {
+              rightParent = right;
+              right = right.left;
+            }
+            if (parent.left === nodeToRemove) {
+              parent.left.val = right.val;
+            } else {
+              parent.right.val = right.val;
+            }
+            if (right.right !== null) {
+              rightParent.left = right.right;
+            } else {
+              rightParent.left = null;
+            }
+          }
+        } else {
+          if (parent.left === nodeToRemove) {
+            if (nodeToRemove.right === null) {
+              parent.left = nodeToRemove.left;
+            } else {
+              parent.left = nodeToRemove.right;
+            }
+          } else {
+            if (nodeToRemove.right === null) {
+              parent.right = nodeToRemove.left;
+            } else {
+              parent.right = nodeToRemove.right;
+            }
+          }
+        }
+      }
+      return nodeToRemove;
   }
 
   /** Further Study!

@@ -158,7 +158,7 @@ describe("BFS", function() {
   });
 });
 
-/* describe("remove", function() {
+describe("remove", function() {
   it("remove should correctly remove a node with no children", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
@@ -248,7 +248,7 @@ describe("BFS", function() {
   });
 });
 
-describe("isBalanced", function() {
+/* describe("isBalanced", function() {
   it("checks if it is balanced", function() {
     var binarySearchTree = new BinarySearchTree();
     binarySearchTree.insert(15);
