@@ -143,7 +143,7 @@ describe("dfsPostOrder", function() {
   });
 });
 
-/* describe("BFS", function() {
+describe("BFS", function() {
   it("should return the correct output", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
@@ -158,7 +158,7 @@ describe("dfsPostOrder", function() {
   });
 });
 
-describe("remove", function() {
+/* describe("remove", function() {
   it("remove should correctly remove a node with no children", function() {
     let binarySearchTree = new BinarySearchTree();
     binarySearchTree
