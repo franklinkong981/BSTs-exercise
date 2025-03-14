@@ -270,6 +270,24 @@ class BinarySearchTree {
       current = current.right;
     }
   }
+
+  dfsInOrderIterative() {
+    let cur = this.root;
+    let stack = [];
+    let dfs = [];
+    while (stack.length > 0 || cur) {
+      while (cur) {
+        stack.push(cur);
+        cur = cur.left;
+      }
+      cur = stack.pop();
+      if (cur) {
+        dfs.push(cur.val);
+        cur = cur.right;
+      }
+    }
+    return dfs;
+  }
 }
 
 module.exports = BinarySearchTree;
