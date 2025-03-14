@@ -225,8 +225,21 @@ class BinarySearchTree {
   /** Further Study!
    * isBalanced(): Returns true if the BST is balanced, false otherwise. */
 
-  isBalanced() {
+  isBalanced(current = this.root) {
+    if (current === null) return true;
 
+    function minDepth(current) {
+      if (current === null) return 0;
+      return 1 + Math.min(minDepth(current.left), minDepth(current.right));
+    }
+
+    function maxDepth(current) {
+      if (current === null) return 0;
+      return 1 + Math.max(maxDepth(current.left), maxDepth(current.right));
+    }
+
+    if (maxDepth(current) - minDepth(current) > 1) return false;
+    return this.isBalanced(current.left) && this.isBalanced(current.right); 
   }
 
   /** Further Study!
