@@ -267,7 +267,7 @@ describe("isBalanced", function() {
   });
 });
 
-/* describe("findSecondHighest", function() {
+ describe("findSecondHighest", function() {
   it("finds the 2nd largest", function() {
     var binarySearchTree = new BinarySearchTree();
     binarySearchTree.insert(15);
@@ -279,4 +279,4 @@ describe("isBalanced", function() {
     var binarySearchTree2 = new BinarySearchTree();
     expect(binarySearchTree2.findSecondHighest()).toEqual(undefined);
   });
-}); */
+}); 

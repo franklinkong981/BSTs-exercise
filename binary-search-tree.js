@@ -246,8 +246,29 @@ class BinarySearchTree {
    * findSecondHighest(): Find the second highest value in the BST, if it exists.
    * Otherwise return undefined. */
 
-  findSecondHighest() {
-    
+  findSecondHighest(current = this.root) {
+    // if the tree is too small, return
+    if (!this.root || (!this.root.left && !this.root.right)) return;
+
+    function findHighest(current) {
+      while (current.right) {
+        current = current.right;
+      }
+
+      return current;
+    }
+
+    while (current) {
+      // Current is largest and has a left subtree and 2nd largest is the largest in that subtree
+      if (current.left && !current.right) {
+        return this.findHighest(current.left);
+      }
+      // Current is parent of largest and largest has no children so current is 2nd largest
+      if (current.right && (!current.right.left && !current.right.right)) {
+        return current.val;
+      }
+      current = current.right;
+    }
   }
 }
 
