@@ -141,7 +141,7 @@ class BinarySearchTree {
     let visitedNodes = [];
     let stack = [this.root];
 
-    while (stack) {
+    while (stack.length) {
       let currentNode = stack.shift();
       if (currentNode) {
         visitedNodes.push(currentNode.val);
